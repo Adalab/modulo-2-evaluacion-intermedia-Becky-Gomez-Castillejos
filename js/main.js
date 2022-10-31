@@ -24,10 +24,10 @@ function badStrenght() {
     if(randomNumber === 3) {
         return 2
     }
-    if(randomNumber === 3) {
+    if(randomNumber === 4) {
         return 3
     }
-    if(randomNumber === 4) {
+    if(randomNumber === 5) {
         return 5
     }
     
