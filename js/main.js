@@ -14,25 +14,38 @@ const trollsStrenght = 5;
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
+function goodStrenght() {
+    pelososStrenght = 1;
+    sureñosBuenosStrenght = 2;
+    enanosStrenght = 3;
+    númenóreanosStrenght = 4;
+    elfosStrenght = 5;
+}
+
+function badStrenght() {
+    sureñosMalosStrenght = 2;
+    orcosStrenght = 2;
+    goblins = 2;
+    huargosStrenght = 3;
+    trollsStrenght = 5;
+    
+}
+
 
 function compareStrenght() {
     const randonNumber = getRandomNumber(5);
-    const pelososStrenght = document.querySelector(".js_Pelosos");
-    pelososStrenght = 1;
+    const saintStrenght = goodStrenght();
+    const evilStrenght = badStrenght();
 
-    const sureñosBuenosStrenght = document.querySelector(".js_Pelosos");
-    sureñosBuenosStrenght = 2;
+    if(saintStrenght > evilStrenght) {
+        message.innerHTML = "Ha ganado el Ejército del Mal! Vuelve a Intentarlo.";
+        
+    } else if (saintStrenght < evilStrenght) {
+        message.innerHTML = "Ha ganado el Ejército del Bien! Enhorabuena.";
 
-    const enanosStrenght = document.querySelector(".js_Pelosos");
-    enanosStrenght = 3;
-
-    const númenóreanosStrenght = document.querySelector(".js_Pelosos");
-    númenóreanosStrenght = 4;
-
-    const elfosStrenght = document.querySelector(".js_Pelosos");
-    elfosStrenght = 5;
-
-    if()
+    } else if (saintStrenght === evilStrenght) {
+        message.innerHTML = "Empate."
+    }
 
 
 }
@@ -40,4 +53,7 @@ function compareStrenght() {
 
 function handleClick(e) {
     e.preventDefault();
+    compareStrenght();
 }
+
+btn.addEventListener("click", handleClick);
