@@ -15,39 +15,36 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 function goodStrenght() {
-    pelososStrenght = 1;
-    sureñosBuenosStrenght = 2;
-    enanosStrenght = 3;
-    númenóreanosStrenght = 4;
-    elfosStrenght = 5;
+    const pelososStrenght = 1;
+    const sureñosBuenosStrenght = 2;
+    const enanosStrenght = 3;
+    const númenóreanosStrenght = 4;
+    const elfosStrenght = 5;
 }
 
 function badStrenght() {
-    sureñosMalosStrenght = 2;
-    orcosStrenght = 2;
-    goblins = 2;
-    huargosStrenght = 3;
-    trollsStrenght = 5;
+    const randonNumber = getRandomNumber(5);
+    console.log(getRandomNumber(5));
+    const sureñosMalosStrenght = 2;
+    const orcosStrenght = 2;
+    const goblins = 2;
+    const huargosStrenght = 3;
+    const trollsStrenght = 5;
     
 }
 
 
 function compareStrenght() {
-    const randonNumber = getRandomNumber(5);
     const saintStrenght = goodStrenght();
     const evilStrenght = badStrenght();
 
-    if(saintStrenght > evilStrenght) {
-        message.innerHTML = "Ha ganado el Ejército del Mal! Vuelve a Intentarlo.";
-        
+    if (saintStrenght > evilStrenght) {
+        message.innerHTML = "Ha ganado el Ejército del Mal! Vuelve a Intentarlo.";  
     } else if (saintStrenght < evilStrenght) {
         message.innerHTML = "Ha ganado el Ejército del Bien! Enhorabuena.";
-
-    } else if (saintStrenght === evilStrenght) {
+    } else {
         message.innerHTML = "Empate."
-    }
-
-
+    } 
 }
 
 
