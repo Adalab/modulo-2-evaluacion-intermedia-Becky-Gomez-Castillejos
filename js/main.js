@@ -6,10 +6,10 @@ const message = document.querySelector(".js_text");
 const userPointsElement = document.querySelector(".js_jugadora");
 const pcPointsElement = document.querySelector(".js_pc");
 
-
-let userPoints = 0;
+//variables para el bonus
+/*let userPoints = 0;
 let PCPoints = 0;
-let moves = 0;
+let moves = 0;*/
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
@@ -47,24 +47,23 @@ function compareStrenght() {
     console.log(evilStrenght);
     if (saintStrenght > evilStrenght) {
         message.innerHTML = "Ha ganado el Ejército del Bien! Enhorabuena.";  
-        userPoints++
+        
     } else if (saintStrenght < evilStrenght) {
         message.innerHTML = "Ha ganado el Ejército del Mal! Vuelve a Intentarlo.";
-        pcPoints++
+        
     } else {
         message.innerHTML = "Empate."
     } 
 }   
 
-function renderScore() {
+/*function renderScore() {
     userPointsElement.innerHTML = `Jugadora: ${userPoints}`;
-    pcPointsElement.innerHTML = `PC: ${pcPoints}`;
-}
+    pcPointsElement.innerHTML = `PC: ${pcPoints}`;*/
+
 
 function handleClick(e) {
     e.preventDefault();
     compareStrenght();
-    renderScore();
 }
 
 btn.addEventListener("click", handleClick);
@@ -74,4 +73,4 @@ btn.addEventListener("click", handleClick);
 /*Calcular los puntos de la usuaria y del ordenador (contador user, contador PC)
 -Contar los 10 movimientos : contador moves
 -Ocultar botón y mostrar otro: 
--
+-*/
